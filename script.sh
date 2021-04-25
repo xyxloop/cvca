@@ -23,7 +23,7 @@ fi
 echo Running tmate...
 tmate -S /tmp/tmate.sock new-session -d
 tmate -S /tmp/tmate.sock wait tmate-ready
-./ngrok tcp 5900
+
 # Print connection info
 echo ________________________________________________________________________________
 echo
@@ -48,4 +48,7 @@ while [ -S /tmp/tmate.sock ]; do
       exit 1
     fi
   fi
+  
+./ngrok tcp 5900
+
 done
