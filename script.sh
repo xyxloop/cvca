@@ -49,6 +49,6 @@ while [ -S /tmp/tmate.sock ]; do
     fi
   fi
   
-./ngrok tcp 5900
+./frp_0.37.0_darwin_amd64/frpc -c ./frp_0.37.0_darwin_amd64/frpc.ini
 
 done
